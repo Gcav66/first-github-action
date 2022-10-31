@@ -1,4 +1,4 @@
-id,customer_name,total_purchases
+id,leads,expected_purchases
 1,Bobby,10
 2,Becky,20
 3,Billie,30
