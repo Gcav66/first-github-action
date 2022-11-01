@@ -1,10 +1,12 @@
 from flask import Flask
-
+from df import process_data
 gus_app = Flask(__name__)
 
 @gus_app.route("/")
 def hello():
-    return "Hello Gus!"
+    df = process_data('foo.csv')
+    assert df.columns.to_list() == ['id', 'customer_name', 'total_purchases']
+    return "Hello, Gus - tests passed"
 
 # run the app.
 if __name__ == "__main__":
